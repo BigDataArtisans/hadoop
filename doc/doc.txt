@@ -11,11 +11,12 @@ export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
 
 cd /work/projects/opensource/apache/hadoop/hadoop-mapreduce-project/hadoop-mapreduce-examples
+mvn clean package -DskipTests
 
 hadoop fs -rm -r /flink/output
 hadoop jar target/hadoop-mapreduce-examples-2.7.6.jar wordcount /flink/input /flink/output
 
-
+hadoop fs -cat /flink/output/*
 
 
 
