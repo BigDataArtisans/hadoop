@@ -1,0 +1,14 @@
+
+
+
+cd /work/projects/opensource/apache/hadoop/hadoop-mapreduce-project/hadoop-mapreduce-examples
+
+hadoop fs -rm -r /flink/output
+hadoop jar target/hadoop-mapreduce-examples-2.7.6.jar wordcount /flink/input /flink/output
+
+
+
+
+
+
+
