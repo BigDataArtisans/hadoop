@@ -14,7 +14,8 @@ cd /work/projects/opensource/apache/hadoop/hadoop-mapreduce-project/hadoop-mapre
 mvn clean package -DskipTests
 
 hadoop fs -rm -r /flink/output
-hadoop jar target/hadoop-mapreduce-examples-2.7.6.jar wordcount /flink/input /flink/output
+hadoop jar target/hadoop-mapreduce-examples-2.7.6.jar org.apache.demo.WordCount /flink/input /flink/output
+
 
 hadoop fs -cat /flink/output/*
 
